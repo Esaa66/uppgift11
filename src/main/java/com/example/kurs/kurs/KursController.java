@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/v1/student")
-public class StudentController {
+@RequestMapping(path = "api/v1/kurs")
+public class KursController {
 
-    private final StudentService studentService;
+    private final KursService kursService;
 
     @Autowired
-    public StudentController(StudentService studentService){
-        this.studentService = studentService;
+    public KursController(KursService kursService){
+        this.kursService = kursService;
     }
 
     //omvandlar klass till endpoint
     @GetMapping
-    public List<Kurs> getStudents(){
-        return studentService.getKurs();
+    public List<Kurs> getKurs(){
+        return kursService.getKurs();
 
     }
 

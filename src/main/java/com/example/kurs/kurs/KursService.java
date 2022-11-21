@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class StudentService {
+public class KursService {
 
     public List<Kurs> getKurs(){
         return List.of(
